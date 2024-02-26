@@ -1,0 +1,87 @@
+:root {
+  --light-background-color: #fff;
+  --light-text-color: #fff;
+  --light-text-gray-1: #fafafa;
+  --light-gray-1: #fafafa;
+  --light-gray-2: #f9f9f9;
+  --light-gray-3: #e6e6e6;
+  --dark-background-color: #252b42;
+  --text-color: #252b42;
+  --primary-color: #23a6f0;
+  --primary-text-color: #23a6f0;
+  --second-text-color: #737373;
+  --success-color: #2dc071;
+  --secondary-color-1: #23856d;
+  --alert-color: #e77c40;
+  --muted-color: #bdbdbd;
+  --muted-text-color: #bdbdbd;
+  --danger-color: #e74040;
+  --disable-element-color: #8ec2f2;
+}
+
+html body {
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+
+/* edito's pick */
+.editor-pick {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 80px 40px;
+}
+
+.editor-pick__title {
+  font-size: 24px;
+  font-weight: bold;
+  color: var(--text-color);
+  text-transform: uppercase;
+}
+
+.editor-pick__text {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+  color: var(--second-text-color);
+  margin-block: 10px 48px;
+  text-align: center;
+}
+
+.editor-pick__galery {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr 242px 242px;
+  gap: 16px;
+
+  > a {
+    text-decoration: none;
+  }
+}
+
+.galery-photo {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.galery-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: bottom;
+}
+
+.galery-photo description {
+  position: absolute;
+  padding: 12px 64px;
+  background: var(--light-background-color);
+  color: var(--text-color);
+  font-size: 16px;
+  font-weight: bold;
+  text-transform: uppercase;
+  z-index: 1;
+  left: 18px;
+  bottom: 18px;
+}
