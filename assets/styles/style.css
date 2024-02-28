@@ -33,6 +33,10 @@
   border-radius: 5px;
   border: none;
   color: var(--light-text-color);
+
+  &:hover {
+    cursor: pointer;
+  }
 }
 
 .section-title {
@@ -231,12 +235,157 @@
   z-index: 1;
 }
 
-/* Footer-redes */
+/* Featured Products */
+.featured-products {
+  display: flex;
+  flex-direction: column;
+  padding: 80px 40px;
+  gap: 80px;
+}
 
+.products-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.products-title {
+  font-size: 40px;
+  line-height: 50px;
+  font-weight: 700;
+  color: var(--text-color);
+  text-align: center;
+}
+
+.products-subtitle {
+  font-size: 14px;
+  line-height: 24px;
+  font-weight: 700;
+  color: var(--primary-text-color);
+}
+
+.posts-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  gap: 30px;
+}
+
+.post {
+  display: flex;
+  flex-direction: column;
+  max-width: 350px;
+  width: 100%;
+  position: relative;
+  box-shadow: 0px 2px 4px #0000001a;
+}
+
+.post-image {
+  width: 100%;
+}
+
+.new-post {
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 24px;
+  text-transform: uppercase;
+  padding-inline: 10px;
+  background: var(--danger-color);
+  color: var(--light-text-color);
+  width: min-content;
+  height: min-content;
+  position: absolute;
+  inset: 20px 30px;
+}
+
+.post-header {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 25px 25px 10px 25px;
+  align-items: start;
+}
+
+.tags-wrapper {
+  display: flex;
+  gap: 15px;
+}
+
+.post-tag {
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 16px;
+  color: var(--second-text-color);
+
+  &:nth-child(1) {
+    color: var(--disable-element-color);
+  }
+}
+
+.post-title {
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 30px;
+}
+
+.post .second-text {
+  text-align: start;
+  padding-inline: 25px;
+}
+
+.post-informations {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  padding: 25px;
+  box-sizing: border-box;
+}
+
+.information-wrapper {
+  display: flex;
+  gap: 5px;
+  align-items: center;
+}
+
+.date-icon {
+  color: var(--primary-color);
+}
+
+.information-wrapper time,
+.information-wrapper span {
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 16px;
+  color: var(--second-text-color);
+}
+
+.post-footer {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  padding: 0px 25px 25px 25px;
+  box-sizing: border-box;
+}
+
+.post-footer i {
+  font-size: 20px;
+  color: var(--primary-color);
+}
+
+.post-link {
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 24px;
+  text-decoration: none;
+  color: var(--second-text-color);
+}
+
+/* footer */
 .footer {
   display: flex;
   flex-direction: column;
-  padding: 0px 40px;
 }
 
 .footer-redes {
@@ -246,7 +395,7 @@
   justify-content: center;
   gap: 12px;
   background: var(--light-gray-1);
-  padding-block: 40px;
+  padding: 40px;
 }
 
 .footer-redes > h2 {
@@ -263,8 +412,13 @@
 }
 
 .footer-icon {
-  height: 24px;
-  width: 24px;
+  font-size: 24px;
+  color: var(--primary-color);
+  transition: color 1s ease;
+
+  &:hover {
+    color: var(--dark-background-color);
+  }
 }
 
 .instagram-icon {
@@ -276,6 +430,7 @@
   flex-direction: column;
   padding-block: 70px;
   gap: 30px;
+  padding: 70px 40px;
 }
 
 .footer-nav {
@@ -347,7 +502,9 @@
   padding-block: 25px;
   background: var(--light-gray-1);
 
-  > p {
+  > .second-text {
+    line-height: 24px;
+    text-transform: capitalize;
     font-weight: 700;
   }
 }
