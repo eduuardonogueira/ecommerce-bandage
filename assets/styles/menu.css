@@ -1,0 +1,287 @@
+.show {
+  display: flex !important;
+}
+
+.hidden {
+  display: none !important;
+}
+
+.bootstrap-icon {
+  width: min-content;
+  display: flex;
+  align-items: center;
+}
+
+.header-desktop {
+  display: none;
+}
+
+.menu {
+  position: fixed;
+  width: 100%;
+  box-sizing: border-box;
+  z-index: 99;
+  background: var(--light-background-color);
+}
+
+.menu-container {
+  display: block;
+  height: 100%;
+  width: 100%;
+}
+
+.menu-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 36px 35px;
+}
+
+.menu-logo {
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 32px;
+  > a {
+    color: var(--text-color);
+    text-decoration: none;
+  }
+}
+
+.menu-links {
+  display: none;
+  position: absolute;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  top: 103px;
+  left: 0px;
+  gap: 30px;
+  background: var(--light-background-color);
+  padding: 100px;
+  box-sizing: border-box;
+  animation: show-menu 1s ease both;
+}
+
+@keyframes show-menu {
+  0% {
+    opacity: 0;
+    height: 0px;
+  }
+
+  to {
+    opacity: 1;
+    height: 80vh;
+  }
+}
+
+.menu-links li {
+  font-size: 30px;
+  line-height: 45px;
+  font-weight: 400;
+
+  > a,
+  > span {
+    color: var(--second-text-color);
+    text-decoration: none;
+  }
+}
+
+:where(.menu-links, .menu-links-secondary) li:hover {
+  > a,
+  > span,
+  > i {
+    cursor: pointer;
+    color: var(--primary-color);
+  }
+}
+
+.menu-links-secondary {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.menu-links-secondary li a,
+.menu-links li a {
+  text-decoration: none;
+}
+
+.link-desktop {
+  display: none;
+}
+
+.menu-login,
+.menu-favorites,
+.menu-shopping {
+  display: flex;
+  gap: 6px;
+  align-items: center;
+}
+
+.menu-icon {
+  font-size: 22px;
+  color: var(--text-color);
+}
+
+.menu-icon:hover {
+  cursor: pointer;
+  color: var(--primary-color);
+}
+
+.menu-button {
+  border: none;
+  background: none;
+  padding: unset;
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.menu-icon-open {
+  display: none;
+}
+
+@media screen and (min-width: 1024px) {
+  .link-desktop {
+    display: flex;
+  }
+
+  .link-mobile {
+    display: none;
+  }
+
+  .header-desktop {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 20px 40px;
+    box-sizing: border-box;
+    background: var(--dark-background-color);
+  }
+
+  .header-contacts {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .contact-wrapper {
+    display: flex;
+    gap: 6px;
+    align-items: center;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 24px;
+    text-decoration: none;
+    color: var(--light-text-color);
+  }
+
+  .header-desktop > p {
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 24px;
+    color: var(--light-text-color);
+  }
+
+  .header-network {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .header-network li {
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 24px;
+    color: var(--light-text-color);
+    > a {
+      color: var(--light-text-color);
+      text-decoration: none;
+    }
+  }
+
+  .header-network li a:hover {
+    color: var(--primary-color);
+  }
+
+  .menu-nav {
+    padding: 28px 38px;
+  }
+
+  .menu-links {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    padding: unset;
+    top: unset;
+    left: unset;
+    width: min-content;
+    animation: unset;
+  }
+
+  .menu-link-shop {
+    position: relative;
+    display: flex;
+    gap: 8px;
+    align-items: center;
+  }
+
+  .menu-link-shop i {
+    position: relative;
+    height: 14px;
+    width: 14px;
+
+    &::before {
+      position: absolute;
+    }
+  }
+
+  .menu-shop {
+    display: none;
+    position: absolute;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    top: 24px;
+    left: -12px;
+    background: var(--light-background-color);
+    height: min-content;
+    width: max-content;
+    padding: 24px;
+    transition: 1s ease;
+    box-sizing: border-box;
+  }
+
+  .menu-links li {
+    font-size: 14px;
+    line-height: 24px;
+    font-weight: 700;
+  }
+
+  .menu-icon {
+    font-size: 18px;
+  }
+
+  .menu-login {
+    font-size: 14px;
+    line-height: 24px;
+    font-weight: 700;
+  }
+
+  .menu-links-secondary li:hover {
+    a,
+    .menu-icon a,
+    .menu-icon {
+      color: var(--text-color);
+    }
+  }
+
+  .menu-links-secondary li a,
+  .menu-icon {
+    transition: color 1s ease;
+    color: var(--primary-color);
+  }
+}

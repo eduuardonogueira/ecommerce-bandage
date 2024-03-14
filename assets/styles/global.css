@@ -1,0 +1,146 @@
+:root {
+  --light-background-color: #fff;
+  --light-text-color: #fff;
+  --light-text-gray-1: #fafafa;
+  --light-gray-1: #fafafa;
+  --light-gray-2: #f9f9f9;
+  --light-gray-3: #e6e6e6;
+  --dark-background-color: #252b42;
+  --text-color: #252b42;
+  --primary-color: #23a6f0;
+  --primary-text-color: #23a6f0;
+  --second-text-color: #737373;
+  --success-color: #2dc071;
+  --secondary-color-1: #23856d;
+  --secondary-color-2: #16673c;
+  --alert-color: #e77c40;
+  --muted-color: #bdbdbd;
+  --muted-text-color: #bdbdbd;
+  --danger-color: #e74040;
+  --disable-element-color: #8ec2f2;
+}
+
+.font-montserrat {
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+
+.title-3xl {
+  font-size: 40px;
+  line-height: 50px;
+  font-weight: 700;
+  color: var(--text-color);
+}
+
+.title-2xl {
+  font-size: 30px;
+  line-height: 45px;
+  font-weight: 700;
+  color: var(--text-color);
+}
+
+.title-xl {
+  font-size: 24px;
+  line-height: 32px;
+  font-weight: 700;
+  color: var(--text-color);
+}
+
+.title-md {
+  font-size: 20px;
+  line-height: 30px;
+  font-weight: 700;
+  color: var(--text-color);
+}
+
+.title-sm {
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 700;
+  color: var(--text-color);
+}
+
+.text-2xl {
+  font-size: 24px;
+  line-height: 32px;
+  font-weight: 400;
+  color: var(--second-text-color);
+}
+
+.text-xl {
+  font-size: 20px;
+  line-height: 30px;
+  font-weight: 400;
+  color: var(--second-text-color);
+}
+
+.text-lg__bold {
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 700;
+  color: var(--second-text-color);
+}
+
+.text-lg__regular {
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 400;
+  color: var(--second-text-color);
+}
+
+.text-md__bold,
+.title-xsm {
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 700;
+  color: var(--second-text-color);
+}
+
+.text-md__regular {
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 400;
+  color: var(--second-text-color);
+}
+
+.text-sm {
+  font-size: 12px;
+  line-height: 16px;
+  font-weight: 400;
+  color: var(--second-text-color);
+}
+
+.button {
+  font-size: 14px;
+  line-height: 28px;
+  padding: 16px 22px;
+  border-radius: 5px;
+  border: none;
+  color: var(--light-text-color);
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .title-3xl {
+    font-size: 58px;
+    line-height: 80px;
+  }
+}
+
+@media screen and (min-width: 1600px) {
+  .carousel-control-next,
+  .carousel-control-prev {
+    width: 25%;
+  }
+}
+
+@media screen and (min-width: 1800px) {
+  .carousel-control-next,
+  .carousel-control-prev {
+    width: 35%;
+  }
+}

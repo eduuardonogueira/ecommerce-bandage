@@ -1,0 +1,137 @@
+.featured {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 80px 40px;
+  gap: 48px;
+}
+
+.featured-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.featured-header {
+  text-align: center;
+
+  > .title-md {
+    text-transform: capitalize;
+    color: var(--second-text-color);
+    font-weight: 400;
+  }
+
+  > .title-xl {
+    text-transform: uppercase;
+  }
+}
+
+.featured-galery {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+}
+
+.featured-product {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 324px;
+  transition: transform 1s ease;
+
+  &:hover {
+    transform: translateY(-20px);
+  }
+}
+
+.product-hidden {
+  display: none;
+}
+
+.product-description {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  padding-block: 25px 35px;
+  > .text-md__regular {
+    text-transform: capitalize;
+  }
+}
+
+.product-prices {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  padding: 5px;
+}
+
+.product-prices > span {
+  &:nth-child(1) {
+    color: var(--muted-color);
+  }
+  &:nth-child(2) {
+    color: var(--secondary-color-1);
+  }
+}
+
+.product-colors {
+  display: flex;
+  justify-content: center;
+  gap: 6px;
+}
+
+.product-colors span {
+  display: block;
+  height: 16px;
+  width: 16px;
+  border-radius: 50%;
+
+  &:nth-child(1) {
+    background: var(--primary-color);
+  }
+  &:nth-child(2) {
+    background: var(--secondary-color-1);
+  }
+  &:nth-child(3) {
+    background: var(--alert-color);
+  }
+  &:nth-child(4) {
+    background: var(--dark-background-color);
+  }
+}
+
+.product-link {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  inset: 0px;
+  z-index: 1;
+}
+
+.product-button {
+  background-color: var(--primary-color);
+}
+
+@media screen and (min-width: 1024px) {
+  .product-button {
+    display: none;
+  }
+
+  .featured-galery {
+    flex-direction: row;
+    max-width: 1080px;
+    flex-wrap: wrap;
+    justify-content: center;
+    row-gap: 80px;
+  }
+
+  .featured-product {
+    max-width: 240px;
+  }
+}

@@ -1,0 +1,145 @@
+.featured-products {
+  display: flex;
+  flex-direction: column;
+  padding: 80px 40px;
+  gap: 80px;
+}
+
+.products-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  padding-inline: 30px;
+}
+
+.products-header {
+  text-align: center;
+
+  > .title-xsm {
+    color: var(--primary-text-color);
+  }
+}
+
+.posts-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  gap: 30px;
+}
+
+.post {
+  display: flex;
+  flex-direction: column;
+  max-width: 350px;
+  width: 100%;
+  position: relative;
+  box-shadow: 0px 2px 4px #0000001a;
+}
+
+.post-image {
+  width: 100%;
+}
+
+.new-post {
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 24px;
+  text-transform: uppercase;
+  padding-inline: 10px;
+  background: var(--danger-color);
+  color: var(--light-text-color);
+  width: min-content;
+  height: min-content;
+  position: absolute;
+  inset: 20px 30px;
+}
+
+.post-header {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 25px 25px 10px 25px;
+  align-items: start;
+}
+
+.tags-wrapper {
+  display: flex;
+  gap: 15px;
+}
+
+.post-tag:nth-child(1) {
+  color: var(--disable-element-color);
+}
+
+.post-title {
+  font-weight: 400;
+}
+
+.post .text-md__regular {
+  text-align: start;
+  padding-inline: 25px;
+}
+
+.post-informations {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  padding: 25px;
+  box-sizing: border-box;
+}
+
+.information-wrapper {
+  display: flex;
+  gap: 5px;
+  align-items: center;
+}
+
+.date-icon {
+  color: var(--primary-color);
+}
+
+.post-footer {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  padding: 0px 25px 25px 25px;
+  box-sizing: border-box;
+}
+
+.post-link {
+  text-decoration: none;
+  transition: transform 1s ease;
+  &:hover {
+    transform: translateX(10px);
+  }
+
+  > .text-md__bold {
+    line-height: 24px;
+  }
+
+  > i {
+    font-size: 20px;
+    color: var(--primary-color);
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .featured-products {
+    padding-top: 110px;
+  }
+
+  .products-header .text-md__regular {
+    max-width: 450px;
+  }
+
+  .posts-wrapper {
+    max-width: 1080px;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    margin: auto;
+    gap: 20px;
+  }
+}
